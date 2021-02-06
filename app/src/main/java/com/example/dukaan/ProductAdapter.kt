@@ -2,6 +2,9 @@ package com.example.dukaan
 
 import android.graphics.Outline
 import android.os.Build
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.TextAppearanceSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +15,7 @@ import androidx.annotation.RequiresApi
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+
 
 class ProductAdapter(var list: List<Product>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
     private val viewOutlineProvider: ViewOutlineProvider = @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -63,7 +67,7 @@ class ProductAdapter(var list: List<Product>) : RecyclerView.Adapter<ProductAdap
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvItemPrice.text = "₹${list[position].price}"
+        holder.tvItemPrice.setText(holder.itemView.context.getSpannableAmount(list[position].price), TextView.BufferType.SPANNABLE)
         holder.tvOrderId.text = list[position].orderId
         holder.tvItemName.text = list[position].itemName
         holder.ivProduct.setImageResource(list[position].productImgResId)
@@ -76,4 +80,6 @@ class ProductAdapter(var list: List<Product>) : RecyclerView.Adapter<ProductAdap
             }
         }
     }
+
+
 }

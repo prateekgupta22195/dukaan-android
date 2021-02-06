@@ -57,7 +57,6 @@ class HomeFragment : Fragment() {
             overviewAdapter.list = overViewData[spinnerOverview.selectedItem as String]!!
             overviewAdapter.notifyDataSetChanged()
         }
-
     }
 
     private lateinit var viewModel: HomeViewModel
@@ -96,26 +95,33 @@ class HomeFragment : Fragment() {
     }
 
     private fun setTabLayout() {
+        val list = products
         tabLayout.apply {
             addTab(newTab().apply {
-                text = "Pending"
+                text = "${DeliveryStatus.PENDING.status} (${list.filter {it.deliveryStatus == DeliveryStatus.PENDING}.count()})"
                 tag = DeliveryStatus.PENDING
             })
             addTab(newTab().apply {
-                text = "Accepted"
+                text = "${DeliveryStatus.ACCEPTED.status} (${list.filter {it.deliveryStatus == DeliveryStatus.ACCEPTED}.count()})"
                 tag = DeliveryStatus.ACCEPTED
             })
             addTab(newTab().apply {
-                text = "Shipped"
+                text = "${DeliveryStatus.SHIPPED.status} (${list.filter {it.deliveryStatus == DeliveryStatus.SHIPPED}.count()})"
                 tag = DeliveryStatus.SHIPPED
             })
             addTab(newTab().apply {
-                text = "Example(19)"
+                text = "Example"
                 tag = DeliveryStatus.ACCEPTED
             })
         }
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabReselected(tab: TabLayout.Tab?) {}
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                val deliveryStatus = tab?.tag as DeliveryStatus
+                productAdapter.list = products.filter {
+                    it.deliveryStatus == deliveryStatus
+                }
+                productAdapter.notifyDataSetChanged()
+            }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {}
 
@@ -141,7 +147,8 @@ class HomeFragment : Fragment() {
         }
 
         tabLayout.isSmoothScrollingEnabled = true
-
+//        select first tab, to show data
+        tabLayout.selectTab(tabLayout.getTabAt(0))
         tvViewAll.setOnClickListener { tabLayout.scrollX = tabLayout.width }
 
         rvProducts.adapter = productAdapter

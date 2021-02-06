@@ -57,4 +57,48 @@
         <item name="android:lineSpacingExtra">6sp</item>
         <item name="android:textColor">@color/warm_grey</item>
     </style>
+    <style name="TextStyle8">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:fontFamily">@font/galano_grotesque</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/white_two</item>
+    </style>
+    <style name="TextStyle9">
+        <item name="android:fontFamily">@font/galano_grotesque</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="android:textColor">@color/warm_grey</item>
+    </style>
+    <style name="TextStyle10">
+        <item name="android:fontFamily">@font/galano_grotesque_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">@color/dark</item>
+    </style>
+    <style name="TextStyleLink">
+        <item name="android:fontFamily">@font/galano_grotesque_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/dusty_orange</item>
+    </style>
+    <style name="TextStyle12">
+        <item name="android:fontFamily">@font/ping_fang_sc_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:textColor">@color/nice_blue</item>
+    </style>
+    <style name="TextStyle13">
+        <item name="android:fontFamily">@font/galano_grotesque_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:textColor">@color/nice_blue</item>
+    </style>
+
 </resources>

@@ -19,8 +19,8 @@
             android:layout_height="120dp"/>
 
         <TextView
-            android:drawablePadding="6dp"
-            android:layout_margin="16dp"
+            android:drawablePadding="@dimen/size_6"
+            android:layout_margin="@dimen/size_16"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:textAppearance="@style/TextStyle5"
@@ -31,12 +31,12 @@
 
         <LinearLayout
             android:id="@+id/label"
-            android:paddingHorizontal="4dp"
-            android:paddingVertical="2dp"
+            android:paddingHorizontal="@dimen/size_4"
+            android:paddingVertical="@dimen/size_2"
             android:background="@drawable/bg_rounded_rec_white"
             android:gravity="center"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="@dimen/size_12"
+            android:layout_marginEnd="@dimen/size_16"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:orientation="vertical"
@@ -44,15 +44,13 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:textColor="@color/white_two"
-                android:textSize="11sp"
-                android:fontFamily="@font/galano_grotesque_regular_ttf"
+                android:textAppearance="@style/TextStyle8"
                 android:text="@string/your_plan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <TextView
-                style="@style/TextStyle6"
+                android:textAppearance="@style/TextStyle6"
                 android:text="@string/_100_free"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -60,46 +58,43 @@
 
 
         <androidx.cardview.widget.CardView
-            app:cardElevation="6dp"
+            app:cardElevation="@dimen/size_6"
             android:id="@+id/header"
-            android:layout_marginHorizontal="16dp"
-            app:cardCornerRadius="6dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginHorizontal="@dimen/size_16"
+            app:cardCornerRadius="@dimen/size_6"
+            android:layout_marginTop="@dimen/size_18"
             app:layout_constraintTop_toBottomOf="@id/label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/size_0"
             android:layout_height="wrap_content">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:padding="12dp"
+                android:padding="@dimen/size_12"
                 android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/labelShare"
-                    style="@style/TextStyle3"
+                    android:textAppearance="@style/TextStyle3"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:text="Share More to Earn More"
+                    android:text="@string/share_more_to_earn_more"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <TextView
+                    android:textAppearance="@style/TextStyle9"
                     android:id="@+id/labelShareMessage"
-                    android:textColor="@color/warm_grey"
-                    android:textSize="13sp"
-                    android:fontFamily="@font/galano_grotesque_regular_ttf"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/size_4"
                     app:layout_constraintTop_toBottomOf="@id/labelShare"
-                    android:text="Your customers can visit your online store and place the orders from this link."
+                    android:text="@string/home_header_message"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <TextView
-                    android:fontFamily="@font/galano_grotesque_medium"
-                    android:textColor="@color/dusty_orange"
-                    android:layout_marginTop="16dp"
+                    android:textAppearance="@style/TextStyleLink"
+                    android:layout_marginTop="@dimen/size_16"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/labelShareMessage"
                     android:text="@string/sellplus_com_mano"
@@ -118,15 +113,13 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
+            android:textAppearance="@style/TextStyle10"
             android:id="@+id/tvOverview"
-            android:textSize="16sp"
-            android:fontFamily="@font/galano_grotesque_medium"
-            android:layout_marginTop="24dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/size_24"
+            android:layout_marginStart="@dimen/size_16"
             app:layout_constraintTop_toBottomOf="@id/header"
             app:layout_constraintStart_toStartOf="parent"
             android:text="Overview"
-            android:textColor="@color/dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -135,8 +128,8 @@
             android:scrollbars="none"
             android:id="@+id/spinnerOverview"
             style="@style/SpinnerTheme"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="26dp"
+            android:layout_marginEnd="@dimen/size_16"
+            android:layout_marginTop="@dimen/size_26"
             android:spinnerMode="dropdown"
             app:layout_constraintTop_toBottomOf="@id/header"
             app:layout_constraintEnd_toEndOf="parent"
@@ -146,10 +139,10 @@
 
         <androidx.recyclerview.widget.RecyclerView
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/size_0"
             app:spanCount="2"
             android:id="@+id/rvOverview"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/size_12"
             tools:listitem="@layout/item_overview"
             tools:itemCount="4"
             android:layout_marginHorizontal="8dp"
@@ -160,12 +153,10 @@
 
 
         <TextView
+            android:textAppearance="@style/TextStyle10"
             android:id="@+id/labelActiveOrders"
-            android:textColor="@color/dark"
-            android:textSize="16sp"
-            android:fontFamily="@font/galano_grotesque_medium"
-            android:layout_marginTop="32dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/size_32"
+            android:layout_marginStart="@dimen/size_16"
             app:layout_constraintTop_toBottomOf="@id/rvOverview"
             app:layout_constraintStart_toStartOf="parent"
             android:text="Active Orders"
@@ -190,8 +181,8 @@
             style="@style/ChipTabLayout"
             app:tabMode="scrollable"
             app:tabGravity="center"
-            app:tabPaddingStart="16dp"
-            app:tabPaddingEnd="16dp"
+            app:tabPaddingStart="@dimen/size_16"
+            app:tabPaddingEnd="@dimen/size_16"
             android:clipToPadding="false"
             android:clipChildren="false"
             android:layout_marginTop="24dp"
@@ -203,8 +194,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvProducts"
-            android:layout_width="0dp"
-            android:paddingTop="20dp"
+            android:layout_width="@dimen/size_0"
+            android:paddingTop="@dimen/size_20"
             android:clipChildren="false"
             android:clipToPadding="false"
             android:minHeight="400dp"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
-    app:cardCornerRadius="6dp"
-    app:cardElevation="6dp"
+    app:cardCornerRadius="@dimen/size_6"
+    app:cardElevation="@dimen/size_6"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
