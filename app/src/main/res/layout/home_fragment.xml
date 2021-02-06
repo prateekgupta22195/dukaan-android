@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/nice_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="120dp"/>
+
+        <TextView
+            android:drawablePadding="6dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="@style/TextStyle5"
+            android:text="@string/mano_super_market"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:drawableRightCompat="@drawable/icons_global_verify" />
+
+        <LinearLayout
+            android:id="@+id/label"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="2dp"
+            android:background="@drawable/bg_rounded_rec_white"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white_two"
+                android:textSize="11sp"
+                android:fontFamily="@font/galano_grotesque_regular_ttf"
+                android:text="@string/your_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                style="@style/TextStyle6"
+                android:text="@string/_100_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="6dp"
+            android:id="@+id/header"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="6dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@id/label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:padding="12dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/labelShare"
+                    style="@style/TextStyle3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Share More to Earn More"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/labelShareMessage"
+                    android:textColor="@color/warm_grey"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/galano_grotesque_regular_ttf"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/labelShare"
+                    android:text="Your customers can visit your online store and place the orders from this link."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:fontFamily="@font/galano_grotesque_medium"
+                    android:textColor="@color/dusty_orange"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/labelShareMessage"
+                    android:text="@string/sellplus_com_mano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/group_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvOverview"
+            android:textSize="16sp"
+            android:fontFamily="@font/galano_grotesque_medium"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Overview"
+            android:textColor="@color/dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:gravity="end"
+            android:scrollbars="none"
+            android:id="@+id/spinnerOverview"
+            style="@style/SpinnerTheme"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="26dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:minWidth="160dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            android:layout_width="0dp"
+            app:spanCount="2"
+            android:id="@+id/rvOverview"
+            android:layout_marginTop="12dp"
+            tools:listitem="@layout/item_overview"
+            tools:itemCount="4"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOverview"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/labelActiveOrders"
+            android:textColor="@color/dark"
+            android:textSize="16sp"
+            android:fontFamily="@font/galano_grotesque_medium"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/rvOverview"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Active Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvViewAll"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:drawableRight="@drawable/ic_chevron_right"
+            android:layout_marginTop="34dp"
+            app:layout_constraintTop_toBottomOf="@id/rvOverview"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="View All"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="0dp"
+            style="@style/ChipTabLayout"
+            app:tabMode="scrollable"
+            app:tabGravity="center"
+            app:tabPaddingStart="16dp"
+            app:tabPaddingEnd="16dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:layout_marginTop="24dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelActiveOrders" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProducts"
+            android:layout_width="0dp"
+            android:paddingTop="20dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:minHeight="400dp"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_product" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MaterialComponents.DayNight.NoActionBar.AppTheme">
+        <item name="colorPrimaryDark">@color/nice_blue_dark</item>
+        <item name="colorPrimary">@color/nice_blue</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <style name="ChipTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/transparent</item>
+        <item name="tabBackground">@drawable/selector_tab</item>
+        <item name="tabSelectedTextColor">@color/white_two</item>
+        <item name="android:textColor">@color/warm_grey</item>
+        <item name="fontFamily">@font/galano_grotesque_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabRippleColor">@android:color/transparent</item>
+    </style>
+
+
+</resources>
+
