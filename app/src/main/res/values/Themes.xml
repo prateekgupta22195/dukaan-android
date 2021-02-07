@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.MaterialComponents.DayNight.NoActionBar.AppTheme">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimaryDark">@color/nice_blue_dark</item>
         <item name="colorPrimary">@color/nice_blue</item>
         <item name="android:windowBackground">@color/white</item>
